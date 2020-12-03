@@ -26,7 +26,7 @@ string solution(vector<int> numbers) {
 		answerStr.push_back(to_string(numbers[i]));
 	}
 	
-  // compare 함수 직접 정의
+ 	// compare 함수 직접 정의
 	sort(answerStr.begin(), answerStr.end(), compare);
 
 
