@@ -29,7 +29,6 @@ string solution(vector<int> numbers) {
  	// compare 함수 직접 정의
 	sort(answerStr.begin(), answerStr.end(), compare);
 
-
 	for (int i = answerStr.size() - 1; i >= 0; i--) {
 		answer += answerStr[i];
 	}
@@ -46,6 +45,7 @@ bool compare(string a, string b) {
 		return a < b;
 	}
 	else {
+		// 각 수를 뒤에 이어 붙여 직접 크기 비교
 		return a + b < b + a;
 	}
 }
