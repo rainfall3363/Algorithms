@@ -33,6 +33,7 @@ vector<int> solution(vector<int> progresses, vector<int> speeds) {
         }
         
         day = (int)ceil((100.0 - q.front()) / speeds[i]);
+        // day = (99 - progresses[i]) / speed[i] + 1; 
         q.pop();
         cnt++;
         
