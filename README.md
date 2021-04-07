@@ -1,2 +1,2 @@
 # Algorithms
-Studying and practicing algorithm problem solving
+Algorithm problem solving
