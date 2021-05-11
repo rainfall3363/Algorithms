@@ -13,19 +13,15 @@ string solution(string number, int k) {
         }
         if (number.at(i) < number.at(i + 1)) {   
             number.erase(i, 1);
-            i = -1;
+            i = -1;     // 처음부터 다시 확인
             erased++;
         }
     }
-    // 이래도 안끝나면 뒤에서부터 삭제
-    for (int i = number.size() - 1; i >= 0; i--) {
-        if (erased == k) {
-            break;
-        }
-        number.erase(number.size() - 1, 1);
-        erased++;
+    // 이래도 안 끝나면 뒤에서부터 삭제
+    if (erased != k) {
+        number.erase(number.size() - 1 - erased, k - erased);
     }
-
+    
     answer += number;
     return answer;
 }
