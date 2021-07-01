@@ -10,7 +10,6 @@ string solution(vector<string> participant, vector<string> completion) {
         isParticipate[i] = false;
     }
     
-    // 동명이인 처리 방법?
     for (int i = 0; i < completion.size(); i++) {
         for (int j = 0; j < participant.size(); j++) {
             if (!isParticipate[j] && !completion[i].compare(participant[j])) {
